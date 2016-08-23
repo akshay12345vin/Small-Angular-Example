@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="phonecatApp"> <!-- here we declare the angular app reference -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Angular Learning Path</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body ng-controller="PhoneListController"><!--this is angular controller which tell the border for app -->
+	 
+	 <ul class="list">
+	    <li ng-repeat="phone in phones"> <!-- ng-repeat makes a loop just like php loop section which runs on html for repeat stuff-->
+	      <span>{{phone.name}}</span> <!-- call the property which is name here -->
+	      <p>{{phone.snippet}}</p> <!-- call the property which is snippet here -->
+	      <p>Total Phone Width : {{phone.width}}</p>
+	    </li>
+	 </ul>
+	
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
